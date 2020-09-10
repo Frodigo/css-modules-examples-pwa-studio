@@ -1,9 +1,32 @@
+
+
 .section {
+    composes: background from './sample-component-framework.css';
     padding: 15px;
+}
+
+.header {
+    background-color: lightgray;
 }
 
 .heading {
     font-size: 24px;
     font-weight: bold;
     margin: 15px 0;
+}
+
+.secondaryHeading {
+    composes: heading;
+}
+
+.sampleHeader {
+    composes: section header heading;
+}
+
+.redHeading {
+    composes: global-class-name from global
+}
+
+.my-sample-class {
+    position: relative;
 }
